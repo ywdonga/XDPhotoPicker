@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CC11E1B21CBDDBD00A6210B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E1A21CBDDBD00A6210B /* AppDelegate.m */; };
+		2CC11E1E21CBDDBD00A6210B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E1D21CBDDBD00A6210B /* ViewController.m */; };
+		2CC11E2121CBDDBD00A6210B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC11E1F21CBDDBD00A6210B /* Main.storyboard */; };
+		2CC11E2321CBDDBF00A6210B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CC11E2221CBDDBF00A6210B /* Assets.xcassets */; };
+		2CC11E2621CBDDBF00A6210B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC11E2421CBDDBF00A6210B /* LaunchScreen.storyboard */; };
+		2CC11E2921CBDDBF00A6210B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E2821CBDDBF00A6210B /* main.m */; };
+		2CC11E3321CBDF3800A6210B /* XDAlbumListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E3121CBDF3800A6210B /* XDAlbumListViewController.m */; };
+		2CC11E3421CBDF3800A6210B /* XDAlbumListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CC11E3221CBDF3800A6210B /* XDAlbumListViewController.xib */; };
+		2CC11E3821CBE20800A6210B /* XDPhotoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E3621CBE20800A6210B /* XDPhotoListViewController.m */; };
+		2CC11E3921CBE20800A6210B /* XDPhotoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CC11E3721CBE20800A6210B /* XDPhotoListViewController.xib */; };
+		2CC11E3C21CBE25D00A6210B /* XDPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E3B21CBE25D00A6210B /* XDPhotoManager.m */; };
+		2CC11E4221CBE43200A6210B /* XDPhotoPickerNav.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E4121CBE43200A6210B /* XDPhotoPickerNav.m */; };
+		2CC11E4521CBE71E00A6210B /* XDAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E4421CBE71E00A6210B /* XDAlbumModel.m */; };
+		2CC11E4821CBED8C00A6210B /* XDPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E4721CBED8C00A6210B /* XDPhotoModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2CC11E1621CBDDBD00A6210B /* XDPhotoPickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XDPhotoPickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CC11E1921CBDDBD00A6210B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2CC11E1A21CBDDBD00A6210B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2CC11E1C21CBDDBD00A6210B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2CC11E1D21CBDDBD00A6210B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2CC11E2021CBDDBD00A6210B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2CC11E2221CBDDBF00A6210B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CC11E2521CBDDBF00A6210B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2CC11E2721CBDDBF00A6210B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CC11E2821CBDDBF00A6210B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CC11E3021CBDF3800A6210B /* XDAlbumListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDAlbumListViewController.h; sourceTree = "<group>"; };
+		2CC11E3121CBDF3800A6210B /* XDAlbumListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDAlbumListViewController.m; sourceTree = "<group>"; };
+		2CC11E3221CBDF3800A6210B /* XDAlbumListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XDAlbumListViewController.xib; sourceTree = "<group>"; };
+		2CC11E3521CBE20800A6210B /* XDPhotoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDPhotoListViewController.h; sourceTree = "<group>"; };
+		2CC11E3621CBE20800A6210B /* XDPhotoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDPhotoListViewController.m; sourceTree = "<group>"; };
+		2CC11E3721CBE20800A6210B /* XDPhotoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XDPhotoListViewController.xib; sourceTree = "<group>"; };
+		2CC11E3A21CBE25D00A6210B /* XDPhotoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDPhotoManager.h; sourceTree = "<group>"; };
+		2CC11E3B21CBE25D00A6210B /* XDPhotoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDPhotoManager.m; sourceTree = "<group>"; };
+		2CC11E4021CBE43200A6210B /* XDPhotoPickerNav.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDPhotoPickerNav.h; sourceTree = "<group>"; };
+		2CC11E4121CBE43200A6210B /* XDPhotoPickerNav.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDPhotoPickerNav.m; sourceTree = "<group>"; };
+		2CC11E4321CBE71E00A6210B /* XDAlbumModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDAlbumModel.h; sourceTree = "<group>"; };
+		2CC11E4421CBE71E00A6210B /* XDAlbumModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDAlbumModel.m; sourceTree = "<group>"; };
+		2CC11E4621CBED8C00A6210B /* XDPhotoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDPhotoModel.h; sourceTree = "<group>"; };
+		2CC11E4721CBED8C00A6210B /* XDPhotoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDPhotoModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CC11E1321CBDDBD00A6210B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CC11E0D21CBDDBD00A6210B = {
+			isa = PBXGroup;
+			children = (
+				2CC11E1821CBDDBD00A6210B /* XDPhotoPickerDemo */,
+				2CC11E1721CBDDBD00A6210B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CC11E1721CBDDBD00A6210B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CC11E1621CBDDBD00A6210B /* XDPhotoPickerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CC11E1821CBDDBD00A6210B /* XDPhotoPickerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2CC11E2F21CBDDC600A6210B /* XDPhotoPicker */,
+				2CC11E1921CBDDBD00A6210B /* AppDelegate.h */,
+				2CC11E1A21CBDDBD00A6210B /* AppDelegate.m */,
+				2CC11E1C21CBDDBD00A6210B /* ViewController.h */,
+				2CC11E1D21CBDDBD00A6210B /* ViewController.m */,
+				2CC11E1F21CBDDBD00A6210B /* Main.storyboard */,
+				2CC11E2221CBDDBF00A6210B /* Assets.xcassets */,
+				2CC11E2421CBDDBF00A6210B /* LaunchScreen.storyboard */,
+				2CC11E2721CBDDBF00A6210B /* Info.plist */,
+				2CC11E2821CBDDBF00A6210B /* main.m */,
+			);
+			path = XDPhotoPickerDemo;
+			sourceTree = "<group>";
+		};
+		2CC11E2F21CBDDC600A6210B /* XDPhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				2CC11E3021CBDF3800A6210B /* XDAlbumListViewController.h */,
+				2CC11E3121CBDF3800A6210B /* XDAlbumListViewController.m */,
+				2CC11E3221CBDF3800A6210B /* XDAlbumListViewController.xib */,
+				2CC11E3521CBE20800A6210B /* XDPhotoListViewController.h */,
+				2CC11E3621CBE20800A6210B /* XDPhotoListViewController.m */,
+				2CC11E3721CBE20800A6210B /* XDPhotoListViewController.xib */,
+				2CC11E3A21CBE25D00A6210B /* XDPhotoManager.h */,
+				2CC11E3B21CBE25D00A6210B /* XDPhotoManager.m */,
+				2CC11E4321CBE71E00A6210B /* XDAlbumModel.h */,
+				2CC11E4421CBE71E00A6210B /* XDAlbumModel.m */,
+				2CC11E4621CBED8C00A6210B /* XDPhotoModel.h */,
+				2CC11E4721CBED8C00A6210B /* XDPhotoModel.m */,
+				2CC11E4021CBE43200A6210B /* XDPhotoPickerNav.h */,
+				2CC11E4121CBE43200A6210B /* XDPhotoPickerNav.m */,
+			);
+			path = XDPhotoPicker;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CC11E1521CBDDBD00A6210B /* XDPhotoPickerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CC11E2C21CBDDBF00A6210B /* Build configuration list for PBXNativeTarget "XDPhotoPickerDemo" */;
+			buildPhases = (
+				2CC11E1221CBDDBD00A6210B /* Sources */,
+				2CC11E1321CBDDBD00A6210B /* Frameworks */,
+				2CC11E1421CBDDBD00A6210B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XDPhotoPickerDemo;
+			productName = XDPhotoPickerDemo;
+			productReference = 2CC11E1621CBDDBD00A6210B /* XDPhotoPickerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CC11E0E21CBDDBD00A6210B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = XD;
+				TargetAttributes = {
+					2CC11E1521CBDDBD00A6210B = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 2CC11E1121CBDDBD00A6210B /* Build configuration list for PBXProject "XDPhotoPickerDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2CC11E0D21CBDDBD00A6210B;
+			productRefGroup = 2CC11E1721CBDDBD00A6210B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CC11E1521CBDDBD00A6210B /* XDPhotoPickerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CC11E1421CBDDBD00A6210B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CC11E3921CBE20800A6210B /* XDPhotoListViewController.xib in Resources */,
+				2CC11E2621CBDDBF00A6210B /* LaunchScreen.storyboard in Resources */,
+				2CC11E2321CBDDBF00A6210B /* Assets.xcassets in Resources */,
+				2CC11E3421CBDF3800A6210B /* XDAlbumListViewController.xib in Resources */,
+				2CC11E2121CBDDBD00A6210B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CC11E1221CBDDBD00A6210B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CC11E4821CBED8C00A6210B /* XDPhotoModel.m in Sources */,
+				2CC11E1E21CBDDBD00A6210B /* ViewController.m in Sources */,
+				2CC11E2921CBDDBF00A6210B /* main.m in Sources */,
+				2CC11E3321CBDF3800A6210B /* XDAlbumListViewController.m in Sources */,
+				2CC11E1B21CBDDBD00A6210B /* AppDelegate.m in Sources */,
+				2CC11E3C21CBE25D00A6210B /* XDPhotoManager.m in Sources */,
+				2CC11E3821CBE20800A6210B /* XDPhotoListViewController.m in Sources */,
+				2CC11E4221CBE43200A6210B /* XDPhotoPickerNav.m in Sources */,
+				2CC11E4521CBE71E00A6210B /* XDAlbumModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2CC11E1F21CBDDBD00A6210B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CC11E2021CBDDBD00A6210B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2CC11E2421CBDDBF00A6210B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CC11E2521CBDDBF00A6210B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CC11E2A21CBDDBF00A6210B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2CC11E2B21CBDDBF00A6210B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2CC11E2D21CBDDBF00A6210B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = K4YX79HD2P;
+				INFOPLIST_FILE = XDPhotoPickerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xd.PhotoPicker.XDPhotoPickerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = AmCommonDev;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2CC11E2E21CBDDBF00A6210B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = K4YX79HD2P;
+				INFOPLIST_FILE = XDPhotoPickerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xd.PhotoPicker.XDPhotoPickerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = AmCommonAdHoc;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CC11E1121CBDDBD00A6210B /* Build configuration list for PBXProject "XDPhotoPickerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CC11E2A21CBDDBF00A6210B /* Debug */,
+				2CC11E2B21CBDDBF00A6210B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CC11E2C21CBDDBF00A6210B /* Build configuration list for PBXNativeTarget "XDPhotoPickerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CC11E2D21CBDDBF00A6210B /* Debug */,
+				2CC11E2E21CBDDBF00A6210B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CC11E0E21CBDDBD00A6210B /* Project object */;
+}
