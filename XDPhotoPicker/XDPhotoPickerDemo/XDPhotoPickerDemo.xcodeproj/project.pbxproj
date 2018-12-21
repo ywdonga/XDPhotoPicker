@@ -7,23 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C19E25821CD514B005C1B67 /* XDPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C19E25621CD514B005C1B67 /* XDPreviewViewController.m */; };
+		2C19E25921CD514B005C1B67 /* XDPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C19E25721CD514B005C1B67 /* XDPreviewViewController.xib */; };
 		2CC11E1B21CBDDBD00A6210B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E1A21CBDDBD00A6210B /* AppDelegate.m */; };
 		2CC11E1E21CBDDBD00A6210B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E1D21CBDDBD00A6210B /* ViewController.m */; };
 		2CC11E2121CBDDBD00A6210B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC11E1F21CBDDBD00A6210B /* Main.storyboard */; };
 		2CC11E2321CBDDBF00A6210B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CC11E2221CBDDBF00A6210B /* Assets.xcassets */; };
 		2CC11E2621CBDDBF00A6210B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC11E2421CBDDBF00A6210B /* LaunchScreen.storyboard */; };
 		2CC11E2921CBDDBF00A6210B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E2821CBDDBF00A6210B /* main.m */; };
-		2CC11E3321CBDF3800A6210B /* XDAlbumListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E3121CBDF3800A6210B /* XDAlbumListViewController.m */; };
-		2CC11E3421CBDF3800A6210B /* XDAlbumListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CC11E3221CBDF3800A6210B /* XDAlbumListViewController.xib */; };
 		2CC11E3821CBE20800A6210B /* XDPhotoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E3621CBE20800A6210B /* XDPhotoListViewController.m */; };
 		2CC11E3921CBE20800A6210B /* XDPhotoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CC11E3721CBE20800A6210B /* XDPhotoListViewController.xib */; };
 		2CC11E3C21CBE25D00A6210B /* XDPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E3B21CBE25D00A6210B /* XDPhotoManager.m */; };
 		2CC11E4221CBE43200A6210B /* XDPhotoPickerNav.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E4121CBE43200A6210B /* XDPhotoPickerNav.m */; };
 		2CC11E4521CBE71E00A6210B /* XDAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E4421CBE71E00A6210B /* XDAlbumModel.m */; };
 		2CC11E4821CBED8C00A6210B /* XDPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E4721CBED8C00A6210B /* XDPhotoModel.m */; };
+		2CC11E4C21CD3D5600A6210B /* XDPhotoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E4A21CD3D5600A6210B /* XDPhotoListCell.m */; };
+		2CC11E4D21CD3D5600A6210B /* XDPhotoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CC11E4B21CD3D5600A6210B /* XDPhotoListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C19E25521CD514B005C1B67 /* XDPreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDPreviewViewController.h; sourceTree = "<group>"; };
+		2C19E25621CD514B005C1B67 /* XDPreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDPreviewViewController.m; sourceTree = "<group>"; };
+		2C19E25721CD514B005C1B67 /* XDPreviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XDPreviewViewController.xib; sourceTree = "<group>"; };
 		2CC11E1621CBDDBD00A6210B /* XDPhotoPickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XDPhotoPickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC11E1921CBDDBD00A6210B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2CC11E1A21CBDDBD00A6210B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -34,9 +39,6 @@
 		2CC11E2521CBDDBF00A6210B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CC11E2721CBDDBF00A6210B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CC11E2821CBDDBF00A6210B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2CC11E3021CBDF3800A6210B /* XDAlbumListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDAlbumListViewController.h; sourceTree = "<group>"; };
-		2CC11E3121CBDF3800A6210B /* XDAlbumListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDAlbumListViewController.m; sourceTree = "<group>"; };
-		2CC11E3221CBDF3800A6210B /* XDAlbumListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XDAlbumListViewController.xib; sourceTree = "<group>"; };
 		2CC11E3521CBE20800A6210B /* XDPhotoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDPhotoListViewController.h; sourceTree = "<group>"; };
 		2CC11E3621CBE20800A6210B /* XDPhotoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDPhotoListViewController.m; sourceTree = "<group>"; };
 		2CC11E3721CBE20800A6210B /* XDPhotoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XDPhotoListViewController.xib; sourceTree = "<group>"; };
@@ -48,6 +50,9 @@
 		2CC11E4421CBE71E00A6210B /* XDAlbumModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDAlbumModel.m; sourceTree = "<group>"; };
 		2CC11E4621CBED8C00A6210B /* XDPhotoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDPhotoModel.h; sourceTree = "<group>"; };
 		2CC11E4721CBED8C00A6210B /* XDPhotoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDPhotoModel.m; sourceTree = "<group>"; };
+		2CC11E4921CD3D5600A6210B /* XDPhotoListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDPhotoListCell.h; sourceTree = "<group>"; };
+		2CC11E4A21CD3D5600A6210B /* XDPhotoListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDPhotoListCell.m; sourceTree = "<group>"; };
+		2CC11E4B21CD3D5600A6210B /* XDPhotoListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XDPhotoListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +102,12 @@
 		2CC11E2F21CBDDC600A6210B /* XDPhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
-				2CC11E3021CBDF3800A6210B /* XDAlbumListViewController.h */,
-				2CC11E3121CBDF3800A6210B /* XDAlbumListViewController.m */,
-				2CC11E3221CBDF3800A6210B /* XDAlbumListViewController.xib */,
 				2CC11E3521CBE20800A6210B /* XDPhotoListViewController.h */,
 				2CC11E3621CBE20800A6210B /* XDPhotoListViewController.m */,
 				2CC11E3721CBE20800A6210B /* XDPhotoListViewController.xib */,
+				2CC11E4921CD3D5600A6210B /* XDPhotoListCell.h */,
+				2CC11E4A21CD3D5600A6210B /* XDPhotoListCell.m */,
+				2CC11E4B21CD3D5600A6210B /* XDPhotoListCell.xib */,
 				2CC11E3A21CBE25D00A6210B /* XDPhotoManager.h */,
 				2CC11E3B21CBE25D00A6210B /* XDPhotoManager.m */,
 				2CC11E4321CBE71E00A6210B /* XDAlbumModel.h */,
@@ -111,6 +116,9 @@
 				2CC11E4721CBED8C00A6210B /* XDPhotoModel.m */,
 				2CC11E4021CBE43200A6210B /* XDPhotoPickerNav.h */,
 				2CC11E4121CBE43200A6210B /* XDPhotoPickerNav.m */,
+				2C19E25521CD514B005C1B67 /* XDPreviewViewController.h */,
+				2C19E25621CD514B005C1B67 /* XDPreviewViewController.m */,
+				2C19E25721CD514B005C1B67 /* XDPreviewViewController.xib */,
 			);
 			path = XDPhotoPicker;
 			sourceTree = "<group>";
@@ -172,11 +180,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CC11E4D21CD3D5600A6210B /* XDPhotoListCell.xib in Resources */,
 				2CC11E3921CBE20800A6210B /* XDPhotoListViewController.xib in Resources */,
 				2CC11E2621CBDDBF00A6210B /* LaunchScreen.storyboard in Resources */,
 				2CC11E2321CBDDBF00A6210B /* Assets.xcassets in Resources */,
-				2CC11E3421CBDF3800A6210B /* XDAlbumListViewController.xib in Resources */,
 				2CC11E2121CBDDBD00A6210B /* Main.storyboard in Resources */,
+				2C19E25921CD514B005C1B67 /* XDPreviewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +199,8 @@
 				2CC11E4821CBED8C00A6210B /* XDPhotoModel.m in Sources */,
 				2CC11E1E21CBDDBD00A6210B /* ViewController.m in Sources */,
 				2CC11E2921CBDDBF00A6210B /* main.m in Sources */,
-				2CC11E3321CBDF3800A6210B /* XDAlbumListViewController.m in Sources */,
+				2C19E25821CD514B005C1B67 /* XDPreviewViewController.m in Sources */,
+				2CC11E4C21CD3D5600A6210B /* XDPhotoListCell.m in Sources */,
 				2CC11E1B21CBDDBD00A6210B /* AppDelegate.m in Sources */,
 				2CC11E3C21CBE25D00A6210B /* XDPhotoManager.m in Sources */,
 				2CC11E3821CBE20800A6210B /* XDPhotoListViewController.m in Sources */,

@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "XDPhotoPickerNav.h"
-#import "XDAlbumListViewController.h"
+#import "XDPhotoListViewController.h"
 
 @interface ViewController ()
 
@@ -24,7 +24,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
-    XDAlbumListViewController *albumListViewController = [[XDAlbumListViewController alloc] init];
+    XDPhotoListViewController *albumListViewController = [[XDPhotoListViewController alloc] init];
     XDPhotoPickerNav *photoPickerNav = [[XDPhotoPickerNav alloc] initWithRootViewController:albumListViewController];
     [self presentViewController:photoPickerNav animated:YES completion:nil];
     

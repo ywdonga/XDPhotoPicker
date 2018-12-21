@@ -13,11 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XDPhotoListViewController : UIViewController
 
-//相册实体
-@property (nonatomic, strong) XDAlbumModel *albumModel;
-//相册管理
-@property (strong, nonatomic) XDPhotoManager *manager;
-
 @end
 
 NS_ASSUME_NONNULL_END

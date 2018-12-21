@@ -21,7 +21,16 @@ NS_ASSUME_NONNULL_BEGIN
 //获取相机交卷相册
 - (void)getAllPhotoAlbums:(void(^)(XDAlbumModel *firstAlbumModel))firstModel;
 //获取指定相册的所有图片
-- (void)getPhotoListWithAlbumModel:(XDAlbumModel *)albumModel complete:(void (^)(NSArray *allList))complete;
+- (void)getPhotoListWithAlbumModel:(XDAlbumModel *)albumModel complete:(void (^)(NSArray <XDPhotoModel *>*allList))complete;
+
+#pragma mark - 获取asset对应的图片
+//快速获取预览图
++ (PHImageRequestID)requestImageForAsset:(PHAsset *)asset size:(CGSize)size completion:(void (^)(UIImage *, NSDictionary *))completion;
+
+//通过url获取视频时长
++ (CGFloat)videoDurationWithUrl:(NSURL *)videoUrl;
+//获取视频Url
++ (void)videoUrlWithAsset:(PHAsset *)phAsset back:(void(^)(NSURL *url))backUrl;
 
 @end
 

@@ -36,14 +36,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XDPhotoModel : NSObject
 
-/**
- 小图照片清晰度 越大越清晰、越消耗性能。太大可能会引起界面卡顿
- 默认设置：[UIScreen mainScreen].bounds.size.width
- 320    ->  0.8
- 375    ->  1.4
- other  ->  1.7
- */
-@property (assign, nonatomic) CGFloat clarityScale;
 /**  照片PHAsset对象  */
 @property (strong, nonatomic) PHAsset *asset;
 /**  是否选中 */
@@ -64,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**  如果当前为视频资源时的视频状态  */
 @property (assign, nonatomic) XDPhotoModelVideoState videoState;
 /**  相机拍摄之后的视频秒数 */
-@property (nonatomic, assign) NSTimeInterval videoDuration;
+@property (nonatomic, assign) NSInteger videoDuration;
 
 @end
 

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="XDPhotoListCell" id="gTV-IL-0wX" customClass="XDPhotoListCell">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="151"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="140" height="151"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Df8-W3-IDK">
+                        <rect key="frame" x="0.0" y="0.0" width="140" height="151"/>
+                        <color key="backgroundColor" red="1" green="0.4912648167" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pT-Ju-P6n">
+                        <rect key="frame" x="0.0" y="121" width="140" height="30"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xd_video_view_b" translatesAutoresizingMaskIntoConstraints="NO" id="s11-ch-UPZ">
+                                <rect key="frame" x="0.0" y="0.0" width="140" height="30"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4L-Fp-x0O">
+                                <rect key="frame" x="103" y="0.0" width="32" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="s11-ch-UPZ" firstAttribute="leading" secondItem="3pT-Ju-P6n" secondAttribute="leading" id="2qS-Pq-S1G"/>
+                            <constraint firstAttribute="bottom" secondItem="s11-ch-UPZ" secondAttribute="bottom" id="cQA-3o-wIg"/>
+                            <constraint firstAttribute="trailing" secondItem="i4L-Fp-x0O" secondAttribute="trailing" constant="5" id="dse-7d-THG"/>
+                            <constraint firstAttribute="bottom" secondItem="i4L-Fp-x0O" secondAttribute="bottom" id="eET-ao-GEW"/>
+                            <constraint firstItem="i4L-Fp-x0O" firstAttribute="top" secondItem="3pT-Ju-P6n" secondAttribute="top" id="l5C-UN-l09"/>
+                            <constraint firstAttribute="trailing" secondItem="s11-ch-UPZ" secondAttribute="trailing" id="rDZ-iM-fZh"/>
+                            <constraint firstAttribute="height" constant="30" id="uDI-iU-jpC"/>
+                            <constraint firstItem="s11-ch-UPZ" firstAttribute="top" secondItem="3pT-Ju-P6n" secondAttribute="top" id="xD7-E1-xdB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Df8-W3-IDK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GIU-ZW-4Uy"/>
+                <constraint firstAttribute="bottom" secondItem="3pT-Ju-P6n" secondAttribute="bottom" id="H2i-UE-abw"/>
+                <constraint firstItem="Df8-W3-IDK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PAV-ik-Uqu"/>
+                <constraint firstAttribute="bottom" secondItem="Df8-W3-IDK" secondAttribute="bottom" id="QoD-sv-CVj"/>
+                <constraint firstAttribute="trailing" secondItem="3pT-Ju-P6n" secondAttribute="trailing" id="fhb-p6-mhn"/>
+                <constraint firstAttribute="trailing" secondItem="Df8-W3-IDK" secondAttribute="trailing" id="j2N-dZ-NDS"/>
+                <constraint firstItem="3pT-Ju-P6n" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="l19-CT-X5n"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="140" height="151"/>
+            <connections>
+                <outlet property="picImageView" destination="Df8-W3-IDK" id="XXw-96-POc"/>
+                <outlet property="videoTimeLabel" destination="i4L-Fp-x0O" id="cY7-Cw-JJy"/>
+                <outlet property="videoView" destination="3pT-Ju-P6n" id="I1X-G0-3Qr"/>
+            </connections>
+            <point key="canvasLocation" x="209.59999999999999" y="199.25037481259372"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="xd_video_view_b" width="50" height="7.5"/>
+    </resources>
+</document>

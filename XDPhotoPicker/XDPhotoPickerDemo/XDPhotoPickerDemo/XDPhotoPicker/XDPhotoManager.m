@@ -21,7 +21,7 @@
         if(collection.assetCollectionSubtype == PHAssetCollectionSubtypeSmartAlbumUserLibrary){
             PHFetchOptions *option = [[PHFetchOptions alloc] init];
             // 是否按创建时间排序
-            option.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
+            option.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES]];
             @autoreleasepool {
                 // 获取照片集合
                 PHFetchResult *result = [PHAsset fetchAssetsInAssetCollection:collection options:option];
@@ -40,12 +40,11 @@
 }
 
 //获取指定相册的所有图片
-- (void)getPhotoListWithAlbumModel:(XDAlbumModel *)albumModel complete:(void (^)(NSArray *allList))complete{
+- (void)getPhotoListWithAlbumModel:(XDAlbumModel *)albumModel complete:(void (^)(NSArray <XDPhotoModel *>*allList))complete{
     NSMutableArray *allArray = [NSMutableArray array];
     NSMutableArray *selectList = [NSMutableArray arrayWithArray:self.selectedList];
     [albumModel.result enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(PHAsset *asset, NSUInteger idx, BOOL * _Nonnull stop) {
         XDPhotoModel *photoModel = [[XDPhotoModel alloc] init];
-        photoModel.clarityScale = 1.7;//小图清晰度
         photoModel.asset = asset;
         @autoreleasepool {
             //处理选中---------------
@@ -83,23 +82,54 @@
     !complete?:complete(allArray);
 }
 
+#pragma mark - 获取asset对应的图片
+//快速获取预览图
++ (PHImageRequestID)requestImageForAsset:(PHAsset *)asset size:(CGSize)size completion:(void (^)(UIImage *, NSDictionary *))completion{
+    PHImageRequestOptions *option = [[PHImageRequestOptions alloc] init];
+    option.resizeMode = PHImageRequestOptionsResizeModeFast;
+//    option.deliveryMode = PHImageRequestOptionsDeliveryModeFastFormat;
+    option.networkAccessAllowed = NO;
+    return [[PHCachingImageManager defaultManager] requestImageForAsset:asset targetSize:size contentMode:PHImageContentModeAspectFill options:option resultHandler:^(UIImage * _Nullable image, NSDictionary * _Nullable info) {
+        !completion?:completion(image, info);
+    }];
+}
+
+
 #pragma mark - < 改变模型的视频状态 >
 - (void)changeModelVideoState:(XDPhotoModel *)model {
-    if (model.subType == XDPhotoModelMediaSubTypeVideo) {
-        if (model.type == XDPhotoModelMediaTypeVideo) {
-            if (model.asset.duration < 1) {
-                model.videoState = XDPhotoModelVideoStateUndersize;
-            }else if (model.asset.duration >= 1 + 1) {
-                model.videoState = XDPhotoModelVideoStateOversize;
-            }
-        }else if (model.type == XDPhotoModelMediaTypeCameraVideo) {
-            if (model.videoDuration < 1) {
-                model.videoState = XDPhotoModelVideoStateUndersize;
-            }else if (model.videoDuration >= 1 + 1) {
-                model.videoState = XDPhotoModelVideoStateOversize;
-            }
+    model.videoDuration = model.asset.duration;
+    if (model.type == XDPhotoModelMediaTypeVideo) {
+        if (model.asset.duration < 1) {
+            model.videoState = XDPhotoModelVideoStateUndersize;
+        }else if (model.asset.duration >= 1 + 1) {
+            model.videoState = XDPhotoModelVideoStateOversize;
+        }
+    }else if (model.type == XDPhotoModelMediaTypeCameraVideo) {
+        if (model.videoDuration < 1) {
+            model.videoState = XDPhotoModelVideoStateUndersize;
+        }else if (model.videoDuration >= 1 + 1) {
+            model.videoState = XDPhotoModelVideoStateOversize;
         }
     }
+}
+
+//通过url获取视频时长
++ (CGFloat)videoDurationWithUrl:(NSURL *)videoUrl{
+    AVPlayerItem *playerItem = [AVPlayerItem playerItemWithURL:videoUrl];
+    CMTime duration = playerItem.duration;
+    float seconds = CMTimeGetSeconds(duration);
+    return seconds;
+}
+
+//获取视频Url
++ (void)videoUrlWithAsset:(PHAsset *)phAsset back:(void(^)(NSURL *url))backUrl{
+    PHVideoRequestOptions *options = [[PHVideoRequestOptions alloc] init];
+    options.version = PHImageRequestOptionsVersionCurrent;
+    options.deliveryMode = PHVideoRequestOptionsDeliveryModeAutomatic;
+    [[PHImageManager defaultManager] requestAVAssetForVideo:phAsset options:options resultHandler:^(AVAsset * _Nullable asset, AVAudioMix * _Nullable audioMix, NSDictionary * _Nullable info) {
+        AVURLAsset *urlAsset = (AVURLAsset *)asset;
+        !backUrl?:backUrl(urlAsset.URL);
+    }];
 }
 
 @end

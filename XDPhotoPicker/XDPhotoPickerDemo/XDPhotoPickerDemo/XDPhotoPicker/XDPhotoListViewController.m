@@ -7,8 +7,26 @@
 //
 
 #import "XDPhotoListViewController.h"
+#import "XDPhotoListCell.h"
+#import "XDPreviewViewController.h"
+
+#define XDPhotoSW [UIScreen mainScreen].bounds.size.width
+#define XDPhotoSH [UIScreen mainScreen].bounds.size.height
+
+#define RowCount 4
+#define RowSp 3
 
 @interface XDPhotoListViewController ()
+<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, strong) NSArray <XDPhotoModel *>* photoModelArray;
+
+//相册实体
+@property (nonatomic, strong) XDAlbumModel *albumModel;
+//相册管理
+@property (nonatomic, strong) XDPhotoManager *photoManager;
+
 
 @end
 
@@ -18,6 +36,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self.collectionView registerNib:[UINib nibWithNibName:XDPhotoListCellID bundle:nil] forCellWithReuseIdentifier:XDPhotoListCellID];
+    self.collectionView.contentInset = UIEdgeInsetsMake(RowSp, RowSp, RowSp, RowSp);
     [self checkAuthor];
 }
 
@@ -35,33 +55,68 @@
                 }]];
                 [weakSelf presentViewController:alert animated:YES completion:nil];
             }else {
-                [weakSelf getPhotoList];
+                [weakSelf getAlbumModelList];
             }
         });
     }];
 }
 
-- (void)getPhotoList {
+//获取相册 及里面的照片
+- (void)getAlbumModelList{
+    __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        __weak typeof(self) weakSelf = self;
-        [self.manager getPhotoListWithAlbumModel:self.albumModel complete:^(NSArray * _Nonnull allList) {
-           
-            NSLog(@"");
-            
+        [weakSelf.photoManager getAllPhotoAlbums:^(XDAlbumModel* firstAlbumModel) {
+            weakSelf.albumModel = firstAlbumModel;
+            [weakSelf.photoManager getPhotoListWithAlbumModel:weakSelf.albumModel complete:^(NSArray <XDPhotoModel *>* _Nonnull allList) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.photoModelArray = allList;
+                    [self.collectionView reloadData];
+                });
+            }];
         }];
     });
 }
+
 
 #pragma mark - public methods
 
 #pragma mark - request methods
 
-#pragma mark - UITableViewDataSource
+#pragma mark - UICollectionViewDataSource
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.photoModelArray.count;
+}
 
-#pragma mark - UITableViewDelegate
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    XDPhotoListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:XDPhotoListCellID forIndexPath:indexPath];
+    cell.photoModel = self.photoModelArray[indexPath.item];
+    return cell;
+}
+
+#pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    XDPreviewViewController *previewViewController = [[XDPreviewViewController alloc] init];
+    previewViewController.curentIndex = indexPath.item;
+    previewViewController.photoModelArray = self.photoModelArray;
+    [self presentViewController:previewViewController animated:YES completion:nil];
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    CGFloat cellWidth = (XDPhotoSW-(RowCount+1)*RowCount)/RowCount;
+    return CGSizeMake(cellWidth, cellWidth);
+}
 
 #pragma mark - event response
 
 #pragma mark - getters and setters
+- (XDPhotoManager *)photoManager{
+    if(!_photoManager){
+        _photoManager = [[XDPhotoManager alloc] init];
+    }
+    return _photoManager;
+}
 
 @end
