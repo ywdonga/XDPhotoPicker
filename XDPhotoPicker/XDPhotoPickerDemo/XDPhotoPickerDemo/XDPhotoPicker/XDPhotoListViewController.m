@@ -9,6 +9,7 @@
 #import "XDPhotoListViewController.h"
 #import "XDPhotoListCell.h"
 #import "XDPreviewViewController.h"
+#import "UIView+XDPhoto.h"
 
 #define XDPhotoSW [UIScreen mainScreen].bounds.size.width
 #define XDPhotoSH [UIScreen mainScreen].bounds.size.height
@@ -21,7 +22,7 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) NSArray <XDPhotoModel *>* photoModelArray;
-
+@property (nonatomic, weak) XDPhotoModel *curentPhotoModel;
 //相册实体
 @property (nonatomic, strong) XDAlbumModel *albumModel;
 //相册管理
@@ -39,6 +40,11 @@
     [self.collectionView registerNib:[UINib nibWithNibName:XDPhotoListCellID bundle:nil] forCellWithReuseIdentifier:XDPhotoListCellID];
     self.collectionView.contentInset = UIEdgeInsetsMake(RowSp, RowSp, RowSp, RowSp);
     [self checkAuthor];
+}
+
+- (void)dealloc{
+    self.curentPhotoModel.thumbPhoto = nil;
+    NSLog(@"相册XDPhotoListViewController 销毁 ❌❌❌");
 }
 
 #pragma mark - private methods
@@ -98,9 +104,34 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
     XDPreviewViewController *previewViewController = [[XDPreviewViewController alloc] init];
-    previewViewController.curentIndex = indexPath.item;
     previewViewController.photoModelArray = self.photoModelArray;
+    
+    previewViewController.curentIndex = indexPath.item;
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    previewViewController.originFrame = [cell frameWithKeyWindow];
+
+    previewViewController.setIndexBackBlock = ^CGRect(NSInteger index) {
+        NSIndexPath *curentIndexPath = [NSIndexPath indexPathForRow:index inSection:0];
+        UICollectionViewCell *curentCell = [collectionView cellForItemAtIndexPath:curentIndexPath];
+        if(!curentCell){
+            [collectionView scrollToItemAtIndexPath:curentIndexPath atScrollPosition:UICollectionViewScrollPositionBottom animated:NO];
+            [self.collectionView setNeedsDisplay];
+        }
+        curentCell = [collectionView cellForItemAtIndexPath:curentIndexPath];
+        CGRect curentRect = [curentCell frameWithKeyWindow];
+        NSLog(@"-->%g/%g", curentRect.origin.x, curentRect.origin.y);
+        return curentRect;
+    };
     [self presentViewController:previewViewController animated:YES completion:nil];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
+    self.curentPhotoModel = self.photoModelArray[indexPath.item];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(nonnull UICollectionViewCell *)cell forItemAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    XDPhotoModel *photoModel = self.photoModelArray[indexPath.item];
+    photoModel.thumbPhoto = nil;
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout

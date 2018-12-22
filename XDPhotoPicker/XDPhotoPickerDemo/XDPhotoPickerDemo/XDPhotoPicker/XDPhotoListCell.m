@@ -29,7 +29,9 @@
     CGFloat imageHeight = 150;
     self.videoView.hidden = _photoModel.subType != XDPhotoModelMediaSubTypeVideo;
     self.videoTimeLabel.text = [NSString stringWithFormat:@"%02ld", _photoModel.videoDuration];
+    __weak __typeof(self)weakSelf = self;
     [XDPhotoManager requestImageForAsset:_photoModel.asset size:CGSizeMake(imageHeight, imageHeight) completion:^(UIImage * _Nonnull img, NSDictionary * _Nonnull info) {
+        weakSelf.photoModel.thumbPhoto = img;
         self.picImageView.image = img;
     }];
 }

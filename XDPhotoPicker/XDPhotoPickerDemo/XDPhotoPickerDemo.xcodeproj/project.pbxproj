@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2C19E25821CD514B005C1B67 /* XDPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C19E25621CD514B005C1B67 /* XDPreviewViewController.m */; };
 		2C19E25921CD514B005C1B67 /* XDPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C19E25721CD514B005C1B67 /* XDPreviewViewController.xib */; };
+		2C19E25C21CE65AA005C1B67 /* XdPhotoTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C19E25B21CE65AA005C1B67 /* XdPhotoTransitionAnimator.m */; };
+		2C19E25F21CE69ED005C1B67 /* UIView+XDPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C19E25E21CE69ED005C1B67 /* UIView+XDPhoto.m */; };
+		2C19E26321CE6B8B005C1B67 /* XDPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C19E26121CE6B8B005C1B67 /* XDPreviewCell.m */; };
+		2C19E26421CE6B8B005C1B67 /* XDPreviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C19E26221CE6B8B005C1B67 /* XDPreviewCell.xib */; };
 		2CC11E1B21CBDDBD00A6210B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E1A21CBDDBD00A6210B /* AppDelegate.m */; };
 		2CC11E1E21CBDDBD00A6210B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC11E1D21CBDDBD00A6210B /* ViewController.m */; };
 		2CC11E2121CBDDBD00A6210B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC11E1F21CBDDBD00A6210B /* Main.storyboard */; };
@@ -29,6 +33,13 @@
 		2C19E25521CD514B005C1B67 /* XDPreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDPreviewViewController.h; sourceTree = "<group>"; };
 		2C19E25621CD514B005C1B67 /* XDPreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDPreviewViewController.m; sourceTree = "<group>"; };
 		2C19E25721CD514B005C1B67 /* XDPreviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XDPreviewViewController.xib; sourceTree = "<group>"; };
+		2C19E25A21CE65AA005C1B67 /* XdPhotoTransitionAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XdPhotoTransitionAnimator.h; sourceTree = "<group>"; };
+		2C19E25B21CE65AA005C1B67 /* XdPhotoTransitionAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XdPhotoTransitionAnimator.m; sourceTree = "<group>"; };
+		2C19E25D21CE69ED005C1B67 /* UIView+XDPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XDPhoto.h"; sourceTree = "<group>"; };
+		2C19E25E21CE69ED005C1B67 /* UIView+XDPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XDPhoto.m"; sourceTree = "<group>"; };
+		2C19E26021CE6B8B005C1B67 /* XDPreviewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDPreviewCell.h; sourceTree = "<group>"; };
+		2C19E26121CE6B8B005C1B67 /* XDPreviewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDPreviewCell.m; sourceTree = "<group>"; };
+		2C19E26221CE6B8B005C1B67 /* XDPreviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XDPreviewCell.xib; sourceTree = "<group>"; };
 		2CC11E1621CBDDBD00A6210B /* XDPhotoPickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XDPhotoPickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC11E1921CBDDBD00A6210B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2CC11E1A21CBDDBD00A6210B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -119,6 +130,13 @@
 				2C19E25521CD514B005C1B67 /* XDPreviewViewController.h */,
 				2C19E25621CD514B005C1B67 /* XDPreviewViewController.m */,
 				2C19E25721CD514B005C1B67 /* XDPreviewViewController.xib */,
+				2C19E26021CE6B8B005C1B67 /* XDPreviewCell.h */,
+				2C19E26121CE6B8B005C1B67 /* XDPreviewCell.m */,
+				2C19E26221CE6B8B005C1B67 /* XDPreviewCell.xib */,
+				2C19E25A21CE65AA005C1B67 /* XdPhotoTransitionAnimator.h */,
+				2C19E25B21CE65AA005C1B67 /* XdPhotoTransitionAnimator.m */,
+				2C19E25D21CE69ED005C1B67 /* UIView+XDPhoto.h */,
+				2C19E25E21CE69ED005C1B67 /* UIView+XDPhoto.m */,
 			);
 			path = XDPhotoPicker;
 			sourceTree = "<group>";
@@ -180,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C19E26421CE6B8B005C1B67 /* XDPreviewCell.xib in Resources */,
 				2CC11E4D21CD3D5600A6210B /* XDPhotoListCell.xib in Resources */,
 				2CC11E3921CBE20800A6210B /* XDPhotoListViewController.xib in Resources */,
 				2CC11E2621CBDDBF00A6210B /* LaunchScreen.storyboard in Resources */,
@@ -197,9 +216,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CC11E4821CBED8C00A6210B /* XDPhotoModel.m in Sources */,
+				2C19E25C21CE65AA005C1B67 /* XdPhotoTransitionAnimator.m in Sources */,
 				2CC11E1E21CBDDBD00A6210B /* ViewController.m in Sources */,
+				2C19E26321CE6B8B005C1B67 /* XDPreviewCell.m in Sources */,
 				2CC11E2921CBDDBF00A6210B /* main.m in Sources */,
 				2C19E25821CD514B005C1B67 /* XDPreviewViewController.m in Sources */,
+				2C19E25F21CE69ED005C1B67 /* UIView+XDPhoto.m in Sources */,
 				2CC11E4C21CD3D5600A6210B /* XDPhotoListCell.m in Sources */,
 				2CC11E1B21CBDDBD00A6210B /* AppDelegate.m in Sources */,
 				2CC11E3C21CBE25D00A6210B /* XDPhotoManager.m in Sources */,

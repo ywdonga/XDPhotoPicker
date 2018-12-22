@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - 获取asset对应的图片
 //快速获取预览图
 + (PHImageRequestID)requestImageForAsset:(PHAsset *)asset size:(CGSize)size completion:(void (^)(UIImage *, NSDictionary *))completion;
+//获取原图
++ (PHImageRequestID)requestOriginalImageForAsset:(PHAsset *)asset completion:(void (^)(UIImage *, NSDictionary *))completion;
 
 //通过url获取视频时长
 + (CGFloat)videoDurationWithUrl:(NSURL *)videoUrl;

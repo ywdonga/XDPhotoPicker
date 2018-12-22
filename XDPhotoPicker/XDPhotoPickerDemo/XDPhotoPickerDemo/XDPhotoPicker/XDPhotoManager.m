@@ -94,6 +94,14 @@
     }];
 }
 
+//获取原图
++ (PHImageRequestID)requestOriginalImageForAsset:(PHAsset *)asset completion:(void (^)(UIImage *, NSDictionary *))completion{
+    return [[PHImageManager defaultManager] requestImageDataForAsset:asset options:nil resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
+        UIImage * image = [UIImage imageWithData:imageData];
+        !completion?:completion(image, info);
+    }];
+}
+
 
 #pragma mark - < 改变模型的视频状态 >
 - (void)changeModelVideoState:(XDPhotoModel *)model {

@@ -45,9 +45,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**  照片子类型  */
 @property (assign, nonatomic) XDPhotoModelMediaSubType subType;
 /**  临时的列表小图  */
-@property (strong, nonatomic) UIImage *thumbPhoto;
+@property (strong, nonatomic, nullable) UIImage *thumbPhoto;
 /**  临时的预览大图  */
-@property (strong, nonatomic) UIImage *previewPhoto;
+@property (strong, nonatomic, nullable) UIImage *previewPhoto;
 /**  模型所对应的选中下标 */
 @property (copy, nonatomic) NSString *selectIndexStr;
 /**  当前图片所在相册的下标 */

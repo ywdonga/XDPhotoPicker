@@ -16,6 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSArray <XDPhotoModel *>* photoModelArray;
 @property (nonatomic, assign) NSInteger curentIndex;
 
+//图片原位置
+@property (nonatomic, assign) CGRect originFrame;
+//切换index回调
+@property (nonatomic, copy) CGRect(^setIndexBackBlock)(NSInteger index);
+
 @end
 
 NS_ASSUME_NONNULL_END
