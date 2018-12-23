@@ -19,13 +19,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="291" height="407"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Gqc-6P-U4M">
-                        <rect key="frame" x="135.5" y="193.5" width="20" height="20"/>
-                    </activityIndicatorView>
                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="k57-Rx-zdB">
                         <rect key="frame" x="0.0" y="0.0" width="291" height="407"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cdj-Rc-esU">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cdj-Rc-esU">
                                 <rect key="frame" x="0.0" y="0.0" width="291" height="407"/>
                             </imageView>
                         </subviews>
@@ -41,23 +38,42 @@
                             <outlet property="delegate" destination="gTV-IL-0wX" id="gU9-Ne-kyd"/>
                         </connections>
                     </scrollView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Gqc-6P-U4M">
+                        <rect key="frame" x="135.5" y="193.5" width="20" height="20"/>
+                    </activityIndicatorView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuF-Qa-ixI">
+                        <rect key="frame" x="0.0" y="0.0" width="291" height="407"/>
+                        <state key="normal" image="xd_video_play"/>
+                        <connections>
+                            <action selector="playButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="35j-lW-qHX"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="zuF-Qa-ixI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9za-0w-H1R"/>
                 <constraint firstItem="Gqc-6P-U4M" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="INR-j9-kg8"/>
                 <constraint firstItem="k57-Rx-zdB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UCK-0w-p4l"/>
                 <constraint firstItem="Gqc-6P-U4M" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="UDu-zb-uDV"/>
                 <constraint firstAttribute="bottom" secondItem="k57-Rx-zdB" secondAttribute="bottom" id="a1o-M5-PMr"/>
+                <constraint firstItem="zuF-Qa-ixI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="azA-Mx-I2B"/>
                 <constraint firstItem="k57-Rx-zdB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eE7-OL-Ds9"/>
+                <constraint firstAttribute="bottom" secondItem="zuF-Qa-ixI" secondAttribute="bottom" id="o8S-ah-dzk"/>
+                <constraint firstAttribute="trailing" secondItem="zuF-Qa-ixI" secondAttribute="trailing" id="pJJ-Pn-i0U"/>
                 <constraint firstAttribute="trailing" secondItem="k57-Rx-zdB" secondAttribute="trailing" id="xUF-Ms-hhn"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <size key="customSize" width="291" height="407"/>
             <connections>
                 <outlet property="activityIndicatorView" destination="Gqc-6P-U4M" id="MaH-lj-5LY"/>
+                <outlet property="backScrollView" destination="k57-Rx-zdB" id="NWC-dI-Wqb"/>
                 <outlet property="picImageView" destination="cdj-Rc-esU" id="iEK-iy-IsV"/>
+                <outlet property="playButton" destination="zuF-Qa-ixI" id="2Oy-qG-wFi"/>
             </connections>
             <point key="canvasLocation" x="167.19999999999999" y="219.94002998500753"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="xd_video_play" width="54" height="54"/>
+    </resources>
 </document>

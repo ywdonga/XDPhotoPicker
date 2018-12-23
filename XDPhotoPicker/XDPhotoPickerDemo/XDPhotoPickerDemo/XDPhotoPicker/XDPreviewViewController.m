@@ -60,6 +60,11 @@
 }
 
 //UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    XDPreviewCell *previewCell = (XDPreviewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+
+}
+
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
     XDPreviewCell *previewCell = (XDPreviewCell *)cell;
     self.curentPhotoModel = previewCell.photoModel;
@@ -73,6 +78,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(nonnull UICollectionViewCell *)cell forItemAtIndexPath:(nonnull NSIndexPath *)indexPath{
     XDPreviewCell *previewCell = (XDPreviewCell *)cell;
     previewCell.photoModel.previewPhoto = nil;
+    [previewCell resetScale];
 }
 
 //UICollectionViewDelegateFlowLayout

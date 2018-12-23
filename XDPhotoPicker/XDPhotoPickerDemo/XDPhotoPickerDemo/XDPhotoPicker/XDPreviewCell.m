@@ -8,12 +8,17 @@
 
 #import "XDPreviewCell.h"
 #import "XDPhotoManager.h"
+#import "UITableView+WebVideoCache.h"
+#import "UIView+WebVideoCache.h"
 
 @interface XDPreviewCell ()
 <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
+@property (weak, nonatomic) IBOutlet UIScrollView *backScrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *picImageView;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+@property (nonatomic, assign) BOOL isPlay;
 
 @end
 
@@ -22,19 +27,57 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick:)];
+    [self addGestureRecognizer:tap];
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+}
+
+- (void)dealloc{
+    if(self.isPlay){
+        [self stopPlayVideo];
+    }
 }
 
 - (void)setPhotoModel:(XDPhotoModel *)photoModel{
     _photoModel = photoModel;
     self.picImageView.image = _photoModel.thumbPhoto;
+    
+    BOOL isVideo = _photoModel.subType == XDPhotoModelMediaSubTypeVideo;
+    self.backScrollView.maximumZoomScale = isVideo?1:5;
+    self.playButton.hidden = !isVideo;
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
     return self.picImageView;
 }
 
-- (void)scrollViewDidZoom:(UIScrollView *)scrollView{
-    
+- (void)starPlayVideoWithUrl:(NSURL *)url{
+    self.isPlay = YES;
+    [self jp_playVideoWithURL:url];
+}
+
+- (void)stopPlayVideo{
+    self.isPlay = NO;
+    [self jp_stopPlay];
+}
+
+
+- (IBAction)playButtonClick:(UIButton *)sender {
+    if(self.isPlay){
+        [self stopPlayVideo];
+        return;
+    }
+    [self.activityIndicatorView startAnimating];
+    [XDPhotoManager videoUrlWithAsset:self.photoModel.asset back:^(NSURL * _Nonnull url) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.activityIndicatorView stopAnimating];
+            [self starPlayVideoWithUrl:url];
+        });
+    }];
+
 }
 
 - (void)showOriginalImage{
@@ -49,6 +92,17 @@
         weakSelf.photoModel.previewPhoto = image;
         weakSelf.picImageView.image = image;
     }];
+}
+
+- (void)resetScale{
+    self.backScrollView.zoomScale = 1;
+    self.playButton.hidden = NO;
+    [self stopPlayVideo];
+}
+
+- (void)setIsPlay:(BOOL)isPlay{
+    _isPlay = isPlay;
+    [self.playButton setImage:_isPlay?nil:[UIImage imageNamed:@"xd_video_play"] forState:UIControlStateNormal];
 }
 
 @end

@@ -16,8 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface XDPreviewCell : UICollectionViewCell
 
 @property (nonatomic, strong) XDPhotoModel *photoModel;
-
 - (void)showOriginalImage;
+- (void)resetScale;
 
 @end
 

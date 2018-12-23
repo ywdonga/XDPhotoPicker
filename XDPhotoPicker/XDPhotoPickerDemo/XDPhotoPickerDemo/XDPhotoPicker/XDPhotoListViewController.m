@@ -27,7 +27,10 @@
 @property (nonatomic, strong) XDAlbumModel *albumModel;
 //相册管理
 @property (nonatomic, strong) XDPhotoManager *photoManager;
-
+/* 预览按钮 */
+@property (weak, nonatomic) IBOutlet UIButton *previewButton;
+/* 确定按钮 */
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
 
 @end
 

@@ -40,7 +40,7 @@
                     <rect key="frame" x="168" y="630" width="39" height="37"/>
                 </pageControl>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kx-ch-VWi">
-                    <rect key="frame" x="20" y="40" width="40" height="40"/>
+                    <rect key="frame" x="315" y="40" width="40" height="40"/>
                     <state key="normal" image="xd_preview_close"/>
                     <connections>
                         <action selector="closeButtonClick:" destination="-1" eventType="touchUpInside" id="Zl0-He-8x6"/>
@@ -51,12 +51,12 @@
             <constraints>
                 <constraint firstItem="GBU-js-Tma" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="35d-jx-rUh"/>
                 <constraint firstItem="Q36-k4-rmA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3fx-ml-qRp"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="0kx-ch-VWi" secondAttribute="trailing" constant="20" id="771-Gh-rWr"/>
+                <constraint firstItem="0kx-ch-VWi" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="AZN-GR-6O6"/>
                 <constraint firstAttribute="bottom" secondItem="GBU-js-Tma" secondAttribute="bottom" id="EfF-pU-xc3"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="Q36-k4-rmA" secondAttribute="bottom" id="U5g-AA-eZD"/>
-                <constraint firstItem="0kx-ch-VWi" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="eQa-4j-Cxy"/>
                 <constraint firstAttribute="trailing" secondItem="GBU-js-Tma" secondAttribute="trailing" id="i5U-TZ-lV9"/>
                 <constraint firstItem="GBU-js-Tma" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="iWw-wD-gyG"/>
-                <constraint firstItem="0kx-ch-VWi" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="sIT-B9-63e"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
