@@ -25,14 +25,22 @@
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cdj-Rc-esU">
                                 <rect key="frame" x="0.0" y="0.0" width="291" height="407"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sun-o8-GMZ">
+                                <rect key="frame" x="0.0" y="0.0" width="291" height="407"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="Sun-o8-GMZ" firstAttribute="leading" secondItem="k57-Rx-zdB" secondAttribute="leading" id="JPk-te-mq1"/>
+                            <constraint firstAttribute="trailing" secondItem="Sun-o8-GMZ" secondAttribute="trailing" id="K6K-EU-vhj"/>
                             <constraint firstItem="cdj-Rc-esU" firstAttribute="top" secondItem="k57-Rx-zdB" secondAttribute="top" id="Nv7-69-ZOH"/>
                             <constraint firstItem="cdj-Rc-esU" firstAttribute="height" secondItem="k57-Rx-zdB" secondAttribute="height" id="Yx2-8p-199"/>
                             <constraint firstItem="cdj-Rc-esU" firstAttribute="leading" secondItem="k57-Rx-zdB" secondAttribute="leading" id="c0j-4Y-xb8"/>
                             <constraint firstAttribute="trailing" secondItem="cdj-Rc-esU" secondAttribute="trailing" id="hUK-1l-IkE"/>
+                            <constraint firstAttribute="bottom" secondItem="Sun-o8-GMZ" secondAttribute="bottom" id="hi5-No-i02"/>
                             <constraint firstItem="cdj-Rc-esU" firstAttribute="width" secondItem="k57-Rx-zdB" secondAttribute="width" id="psc-Dg-isD"/>
                             <constraint firstAttribute="bottom" secondItem="cdj-Rc-esU" secondAttribute="bottom" id="vVF-AV-VpQ"/>
+                            <constraint firstItem="Sun-o8-GMZ" firstAttribute="top" secondItem="k57-Rx-zdB" secondAttribute="top" id="vkN-sJ-xep"/>
                         </constraints>
                         <connections>
                             <outlet property="delegate" destination="gTV-IL-0wX" id="gU9-Ne-kyd"/>
@@ -69,6 +77,7 @@
                 <outlet property="backScrollView" destination="k57-Rx-zdB" id="NWC-dI-Wqb"/>
                 <outlet property="picImageView" destination="cdj-Rc-esU" id="iEK-iy-IsV"/>
                 <outlet property="playButton" destination="zuF-Qa-ixI" id="2Oy-qG-wFi"/>
+                <outlet property="videoView" destination="Sun-o8-GMZ" id="wY3-Vb-Wcd"/>
             </connections>
             <point key="canvasLocation" x="167.19999999999999" y="219.94002998500753"/>
         </collectionViewCell>

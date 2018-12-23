@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
 @property (weak, nonatomic) IBOutlet UIScrollView *backScrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *picImageView;
+@property (weak, nonatomic) IBOutlet UIView *videoView;
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
 @property (nonatomic, assign) BOOL isPlay;
 
@@ -55,13 +56,15 @@
 }
 
 - (void)starPlayVideoWithUrl:(NSURL *)url{
+    self.videoView.hidden = NO;
     self.isPlay = YES;
-    [self jp_playVideoWithURL:url];
+    [self.videoView jp_playVideoWithURL:url];
 }
 
 - (void)stopPlayVideo{
+    self.videoView.hidden = YES;
     self.isPlay = NO;
-    [self jp_stopPlay];
+    [self.videoView jp_pause];
 }
 
 
